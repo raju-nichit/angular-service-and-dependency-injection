@@ -6,13 +6,12 @@ import {AccountService} from './account.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [LoggingService, AccountService]
+  providers: [LoggingService]
 })
 export class AppComponent implements OnInit {
   accounts: { name: string, status: string }[] = [];
 
   constructor(private __loggingService: LoggingService, private __accountService: AccountService) {
-
   }
 
   ngOnInit() {
